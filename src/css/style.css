@@ -1,0 +1,102 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  color: #333333;
+}
+
+h3 {
+  width: max-content;
+  margin-top: 25px;
+
+  font-size: 1.3em;
+}
+
+.cards {
+  width: max-content;
+  height: 25px;
+  margin: 10px 0;
+}
+
+.cards li {
+  display: block;
+  float: left;
+}
+
+.card {
+  float: left;
+  width: 39px;
+  height: 25px;
+  margin-right: 4px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  border: 0;
+
+  text-indent: -9999px;
+}
+
+.form-control {
+  max-width: 240px;
+}
+
+a.btn.btn-success {
+  margin-left: 10px;
+
+  color: #ffffff;
+}
+
+a.btn.btn-success:hover {
+  color: #ffffff;
+}
+
+.disabled {
+  filter: opacity(0.5) grayscale(1);
+}
+
+.card.visa {
+  background-image: url(../img/card-visa.svg);
+}
+
+.card.american-express {
+  background-image: url(../img/card-american-express.svg);
+}
+
+.card.jcb {
+  background-image: url(../img/card-jcb.svg);
+}
+
+.card.mastercard {
+  background-image: url(../img/card-mastercard.svg);
+}
+
+.card.discover {
+  background-image: url(../img/card-discover.svg);
+}
+
+.card.diners-club {
+  background-image: url(../img/card-diners-club.svg);
+}
+
+.card.mir {
+  background-image: url(../img/card-mir.svg);
+}
+
+.invalid {
+  background-color: #ffdddd;
+}
+
+.valid {
+  background-color: #ddffdd;
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    width: 320px;
+  }
+
+  a.btn.btn-success {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
