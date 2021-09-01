@@ -49,9 +49,15 @@ export default class CardDataParser {
         result.firstDigits = cardData[1].split(',').map(
           (item) => this.getIterableRange(item, false),
         );
-        result.acceptableLength = cardData[2].split(',').map(
-          (item) => [...this.getIterableRange(item)],
-        ).flat();
+        result.acceptableLength = [];
+        cardData[2].split(',').forEach(
+          (item) => {
+            const iterableRange = this.getIterableRange(item);
+            for (const number of iterableRange) {
+              result.acceptableLength.push(number);
+            }
+          },
+        );
         return result;
       });
     } catch (e) {
