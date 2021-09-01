@@ -67,13 +67,12 @@ export default class CardDataParser {
 
   static getBiggestFirstDigits(data) {
     try {
-      return Math.max(
-        ...data
-          .map((item) => item[1]
-            .split(/-|,/))
-          .flat()
-          .map((item) => +item),
-      );
+      const result = [];
+      const tempo = data.map((item) => item[1].split(/-|,/));
+      tempo.forEach((arr) => {
+        arr.forEach((number) => result.push(number));
+      });
+      return Math.max(...result);
     } catch (e) {
       throw new Error(`Dataset Error: ${e.message}`);
     }
